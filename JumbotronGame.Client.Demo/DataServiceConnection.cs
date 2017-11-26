@@ -40,21 +40,21 @@ namespace JumbotronGame.Client.Demo
         {
             await Task.Delay(1000);
 
-            return await _dataService.GetItemAsync(id, ct);
+            return await _dataService.GetItemAsync(id, ct).ConfigureAwait(false);
         }
 
         public async Task<IEnumerable<TEntity>> GetItemsAsync(TCriteria criteria, CancellationToken ct)
         {
             await Task.Delay(1000);
 
-            return await _dataService.GetItemsAsync(criteria, ct);
+            return await _dataService.GetItemsAsync(criteria, ct).ConfigureAwait(false);
         }
 
         public async Task<TEntity> SaveItemAsync(TEntity entity, CancellationToken ct)
         {
             await Task.Delay(1000);
 
-            return await _dataService.SaveItemAsync(entity, ct);
+            return await _dataService.SaveItemAsync(entity, ct).ConfigureAwait(false);
         }
 
         #endregion Methods

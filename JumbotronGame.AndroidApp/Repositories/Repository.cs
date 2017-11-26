@@ -42,17 +42,17 @@ namespace JumbotronGame.AndroidApp.Repositories
 
         public async Task<TEntity> GetItemAsync(int id, CancellationToken ct)
         {
-            return await _dataServiceConnection.GetItemAsync(id, ct);
+            return await _dataServiceConnection.GetItemAsync(id, ct).ConfigureAwait(false);
         }
 
         public async Task<IEnumerable<TEntity>> GetItemsAsync(TCriteria criteria, CancellationToken ct)
         {
-            return await _dataServiceConnection.GetItemsAsync(criteria, ct);
+            return await _dataServiceConnection.GetItemsAsync(criteria, ct).ConfigureAwait(false);
         }
 
         public async Task<TEntity> SaveItemAsync(TEntity entity, CancellationToken ct)
         {
-            return await _dataServiceConnection.SaveItemAsync(entity, ct);
+            return await _dataServiceConnection.SaveItemAsync(entity, ct).ConfigureAwait(false);
         }
 
         private void OnItemsAdded(object sender, DataChangedEventArgs<TEntity> e)

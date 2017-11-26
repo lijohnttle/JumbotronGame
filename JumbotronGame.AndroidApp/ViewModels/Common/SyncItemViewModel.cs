@@ -39,7 +39,7 @@ namespace JumbotronGame.AndroidApp.ViewModels.Common
             DisposeCore(true);
         }
 
-        protected void Dispose(bool disposing)
+        protected virtual void Dispose(bool disposing)
         {
 
         }

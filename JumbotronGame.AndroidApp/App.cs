@@ -55,7 +55,7 @@ namespace JumbotronGame.AndroidApp
             base.OnCreate();
         }
 
-        private void ConfigureServices(IServiceCollection serviceCollection)
+        private static void ConfigureServices(IServiceCollection serviceCollection)
         {
             serviceCollection.AddTransient<ILogger, DemoLogger>();
 

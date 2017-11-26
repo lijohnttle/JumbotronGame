@@ -63,10 +63,10 @@ namespace JumbotronGame.Server.DataServices.Demo.Implementations
         {
             if (_storage.TryGetValue(id, out var result))
             {
-                return await Task.FromResult(result);
+                return await Task.FromResult(result).ConfigureAwait(false);
             }
 
-            return await Task.FromResult<ArenaEvent>(null);
+            return await Task.FromResult<ArenaEvent>(null).ConfigureAwait(false);
         }
 
         public override async Task<IEnumerable<ArenaEvent>> GetItemsAsync(ArenaEventCriteria criteria, CancellationToken ct)
@@ -86,7 +86,7 @@ namespace JumbotronGame.Server.DataServices.Demo.Implementations
                 result.Add(entity);
             }
 
-            return await Task.FromResult(result);
+            return await Task.FromResult(result).ConfigureAwait(false);
         }
 
         public override Task<ArenaEvent> SaveItemAsync(ArenaEvent entity, CancellationToken ct)

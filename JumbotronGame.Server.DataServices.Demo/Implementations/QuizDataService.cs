@@ -47,10 +47,10 @@ namespace JumbotronGame.Server.DataServices.Demo.Implementations
         {
             if (_storage.TryGetValue(id, out var result))
             {
-                return await Task.FromResult(result);
+                return await Task.FromResult(result).ConfigureAwait(false);
             }
 
-            return await Task.FromResult<Quiz>(null);
+            return await Task.FromResult<Quiz>(null).ConfigureAwait(false);
         }
 
         public override async Task<IEnumerable<Quiz>> GetItemsAsync(QuizCriteria criteria, CancellationToken ct)
@@ -70,7 +70,7 @@ namespace JumbotronGame.Server.DataServices.Demo.Implementations
                 result.Add(entity);
             }
 
-            return await Task.FromResult(result);
+            return await Task.FromResult(result).ConfigureAwait(false);
         }
 
         public override Task<Quiz> SaveItemAsync(Quiz entity, CancellationToken ct)

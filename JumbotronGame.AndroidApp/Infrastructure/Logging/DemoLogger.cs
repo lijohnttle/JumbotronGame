@@ -7,15 +7,13 @@ namespace JumbotronGame.AndroidApp.Infrastructure.Logging
     {
         public void Log(LoggerLevel level, string message)
         {
-            switch (level)
+            if (level == LoggerLevel.Trace)
             {
-                case LoggerLevel.Trace:
-                    Trace.WriteLine(message);
-                    break;
-
-                default:
-                    Debug.WriteLine(message);
-                    break;
+                Trace.WriteLine(message);
+            }
+            else
+            {
+                Debug.WriteLine(message);
             }
         }
     }

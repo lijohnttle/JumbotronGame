@@ -20,17 +20,17 @@ namespace JumbotronGame.Server.DataServices.Demo.Implementations
 
         public override async Task<QuizAnswerSet> GetItemAsync(int id, CancellationToken ct)
         {
-            return await Task.FromResult<QuizAnswerSet>(null);
+            return await Task.FromResult<QuizAnswerSet>(null).ConfigureAwait(false);
         }
 
         public override async Task<IEnumerable<QuizAnswerSet>> GetItemsAsync(QuizAnswerSetCriteria criteria, CancellationToken ct)
         {
-            return await Task.FromResult(new QuizAnswerSet[0]);
+            return await Task.FromResult(new QuizAnswerSet[0]).ConfigureAwait(false);
         }
 
         public override async Task<QuizAnswerSet> SaveItemAsync(QuizAnswerSet entity, CancellationToken ct)
         {
-            return await Task.FromResult(entity);
+            return await Task.FromResult(entity).ConfigureAwait(false);
         }
 
         #endregion Methods
