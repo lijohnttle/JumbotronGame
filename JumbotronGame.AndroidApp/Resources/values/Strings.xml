@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">JumbotronGame</string>
+  <string name="arena_events_header">ARENA EVENTS</string>
+  <string name="quiz_completed">Completed!</string>
+</resources>

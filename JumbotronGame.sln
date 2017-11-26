@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JumbotronGame.AndroidApp", "JumbotronGame.AndroidApp\JumbotronGame.AndroidApp.csproj", "{4868A0E2-6F80-4DF1-9EDE-E82C0F57738A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{E5542996-D74E-4B4E-AEAE-BF0D2FDA0F6E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{EC60B7F7-7F9A-4FE7-9A59-F3C2CABF10CD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JumbotronGame.Server.DataContracts", "JumbotronGame.Server.DataContracts\JumbotronGame.Server.DataContracts.csproj", "{D14B8E41-7212-427B-9B02-B743C8A35875}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JumbotronGame.Client", "JumbotronGame.Client\JumbotronGame.Client.csproj", "{BC422C2A-7F5A-4E05-949E-8F6A63F20ECC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JumbotronGame.Server.DataServices", "JumbotronGame.Server.DataServices\JumbotronGame.Server.DataServices.csproj", "{EFF7F76F-038D-409D-A50A-32709939F848}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{F3BCBD76-544A-4496-8D19-31418AC3AD91}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{D2D08668-1177-44DF-8D21-6685289AFA57}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JumbotronGame.Server.DataServices.Demo", "JumbotronGame.Server.DataServices.Demo\JumbotronGame.Server.DataServices.Demo.csproj", "{E0FA3C04-1242-4459-B670-6DC2C9855ED4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{DE1379DD-A6EE-4A80-8371-71D26E823D72}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JumbotronGame.Client.Demo", "JumbotronGame.Client.Demo\JumbotronGame.Client.Demo.csproj", "{B4686B7F-D5D4-425E-9112-454BA83E6DF7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{C61DE97E-4137-4A5F-B74B-1C84C0BB8D0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JumbotronGame.Common", "JumbotronGame.Common\JumbotronGame.Common.csproj", "{6E144DF9-8C1E-469E-A02E-884D8C73C392}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4868A0E2-6F80-4DF1-9EDE-E82C0F57738A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4868A0E2-6F80-4DF1-9EDE-E82C0F57738A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4868A0E2-6F80-4DF1-9EDE-E82C0F57738A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4868A0E2-6F80-4DF1-9EDE-E82C0F57738A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4868A0E2-6F80-4DF1-9EDE-E82C0F57738A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4868A0E2-6F80-4DF1-9EDE-E82C0F57738A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D14B8E41-7212-427B-9B02-B743C8A35875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D14B8E41-7212-427B-9B02-B743C8A35875}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D14B8E41-7212-427B-9B02-B743C8A35875}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D14B8E41-7212-427B-9B02-B743C8A35875}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC422C2A-7F5A-4E05-949E-8F6A63F20ECC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC422C2A-7F5A-4E05-949E-8F6A63F20ECC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC422C2A-7F5A-4E05-949E-8F6A63F20ECC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC422C2A-7F5A-4E05-949E-8F6A63F20ECC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFF7F76F-038D-409D-A50A-32709939F848}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFF7F76F-038D-409D-A50A-32709939F848}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFF7F76F-038D-409D-A50A-32709939F848}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFF7F76F-038D-409D-A50A-32709939F848}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0FA3C04-1242-4459-B670-6DC2C9855ED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0FA3C04-1242-4459-B670-6DC2C9855ED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0FA3C04-1242-4459-B670-6DC2C9855ED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0FA3C04-1242-4459-B670-6DC2C9855ED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4686B7F-D5D4-425E-9112-454BA83E6DF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4686B7F-D5D4-425E-9112-454BA83E6DF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4686B7F-D5D4-425E-9112-454BA83E6DF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4686B7F-D5D4-425E-9112-454BA83E6DF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E144DF9-8C1E-469E-A02E-884D8C73C392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E144DF9-8C1E-469E-A02E-884D8C73C392}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E144DF9-8C1E-469E-A02E-884D8C73C392}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E144DF9-8C1E-469E-A02E-884D8C73C392}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D14B8E41-7212-427B-9B02-B743C8A35875} = {EC60B7F7-7F9A-4FE7-9A59-F3C2CABF10CD}
+		{BC422C2A-7F5A-4E05-949E-8F6A63F20ECC} = {E5542996-D74E-4B4E-AEAE-BF0D2FDA0F6E}
+		{EFF7F76F-038D-409D-A50A-32709939F848} = {EC60B7F7-7F9A-4FE7-9A59-F3C2CABF10CD}
+		{D2D08668-1177-44DF-8D21-6685289AFA57} = {F3BCBD76-544A-4496-8D19-31418AC3AD91}
+		{E0FA3C04-1242-4459-B670-6DC2C9855ED4} = {D2D08668-1177-44DF-8D21-6685289AFA57}
+		{DE1379DD-A6EE-4A80-8371-71D26E823D72} = {F3BCBD76-544A-4496-8D19-31418AC3AD91}
+		{B4686B7F-D5D4-425E-9112-454BA83E6DF7} = {DE1379DD-A6EE-4A80-8371-71D26E823D72}
+		{6E144DF9-8C1E-469E-A02E-884D8C73C392} = {C61DE97E-4137-4A5F-B74B-1C84C0BB8D0C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {376D3FC8-D196-4574-BD25-CFDAA22BEB3A}
+	EndGlobalSection
+EndGlobal
