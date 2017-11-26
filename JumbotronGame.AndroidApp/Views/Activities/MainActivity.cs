@@ -24,7 +24,7 @@ namespace JumbotronGame.AndroidApp.Views.Activities
 
         #region Properties
 
-        public IMainViewModel ViewModel => App.Locator.Main;
+        public static IMainViewModel ViewModel => App.Locator.Main;
 
         public GridLayout ArenaEventsListContainerElement { get; private set; }
 
@@ -71,32 +71,6 @@ namespace JumbotronGame.AndroidApp.Views.Activities
             userProfileItem.SetIntent(new Intent(this, typeof(UserProfileActivity)));
 
             return true;
-        }
-
-        private View GetArenaEventTemplate(int position, ArenaEventListItemViewModel itemViewModel, View convertView)
-        {
-            // CleanUp & Initialize
-            if (convertView != null)
-            {
-                if (_arenaEventHeaderBindings.TryGetValue(convertView, out var existBinding))
-                {
-                    existBinding.Detach();
-
-                    _arenaEventHeaderBindings.Remove(convertView);
-                }
-            }
-            else
-            {
-                convertView = LayoutInflater.Inflate(Resource.Layout.ArenaEventListItemTemplate, null);
-            }
-
-            // Header
-            var headerElement = convertView.FindViewById<TextView>(Resource.Id.HeaderTextView);
-
-            _arenaEventHeaderBindings.Add(convertView,
-                new Binding<string, string>(itemViewModel, () => itemViewModel.Header, headerElement, () => headerElement.Text, BindingMode.OneWay));
-
-            return convertView;
         }
 
         #endregion Methods

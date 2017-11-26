@@ -37,7 +37,7 @@ namespace JumbotronGame.Server.DataServices.Demo.Implementations
 
         public override async Task<IEnumerable<UserProfile>> GetItemsAsync(UserProfileCriteria criteria, CancellationToken ct)
         {
-            return await Task.FromResult(new UserProfile[] { _userProfile }).ConfigureAwait(false); ;
+            return await Task.FromResult(new [] { _userProfile }).ConfigureAwait(false); ;
         }
 
         public override Task<UserProfile> SaveItemAsync(UserProfile entity, CancellationToken ct)
