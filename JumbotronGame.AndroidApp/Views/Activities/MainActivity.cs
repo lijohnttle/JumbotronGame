@@ -5,7 +5,6 @@ using Android.Views;
 using Android.Widget;
 using GalaSoft.MvvmLight.Helpers;
 using GalaSoft.MvvmLight.Views;
-using JumbotronGame.AndroidApp.ViewModels.ArenaEvents;
 using JumbotronGame.AndroidApp.ViewModels.Main;
 using JumbotronGame.AndroidApp.Views.Fragments;
 using System.Collections.Generic;
@@ -17,7 +16,6 @@ namespace JumbotronGame.AndroidApp.Views.Activities
     {
         #region Fields
 
-        private readonly Dictionary<View, Binding> _arenaEventHeaderBindings = new Dictionary<View, Binding>();
         private readonly List<Binding> _bindings = new List<Binding>();
 
         #endregion Fields

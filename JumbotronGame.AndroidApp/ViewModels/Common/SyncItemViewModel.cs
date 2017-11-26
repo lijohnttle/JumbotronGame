@@ -25,7 +25,7 @@ namespace JumbotronGame.AndroidApp.ViewModels.Common
 
         #region .ctor
 
-        public SyncItemViewModel(IRepository<TEntity, TCriteria> repository)
+        protected SyncItemViewModel(IRepository<TEntity, TCriteria> repository)
         {
             Repository = repository;
         }
