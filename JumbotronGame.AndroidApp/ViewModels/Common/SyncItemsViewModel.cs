@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace JumbotronGame.AndroidApp.ViewModels.Common
 {
-    public abstract class SyncItemsViewModel<TEntity, TCriteria, TItem> : ExtendedViewModel, ISyncItemsViewModel<TEntity, TCriteria, TItem>
+    public abstract class SyncItemsViewModel<TEntity, TCriteria, TItem> : ExtendedViewModel, ISyncItemsViewModel<TEntity, TCriteria, TItem>, IDisposable
         where TEntity : IEntity
         where TCriteria : ICriteria
         where TItem : IItemViewModel
@@ -113,7 +113,7 @@ namespace JumbotronGame.AndroidApp.ViewModels.Common
 
         public async void Synchronize()
         {
-            await SynchronizeAsync();
+            await SynchronizeAsync().ConfigureAwait(false); ;
         }
 
         public async Task SynchronizeAsync()
