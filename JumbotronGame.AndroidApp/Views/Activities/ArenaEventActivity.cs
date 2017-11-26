@@ -6,6 +6,7 @@ using GalaSoft.MvvmLight.Helpers;
 using JumbotronGame.AndroidApp.ViewModels.ArenaEvents;
 using JumbotronGame.AndroidApp.Views.Fragments;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace JumbotronGame.AndroidApp.Views.Activities
 {
@@ -32,7 +33,7 @@ namespace JumbotronGame.AndroidApp.Views.Activities
 
         #region Methods
 
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected override async void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
@@ -63,7 +64,7 @@ namespace JumbotronGame.AndroidApp.Views.Activities
                 mode: BindingMode.OneWay)
                 .ConvertSourceToTarget(t => t ? ViewStates.Visible : ViewStates.Gone));
 
-            UpdateArenaEvent();
+            await UpdateArenaEventAsync().ConfigureAwait(false);
         }
 
         protected override void OnDestroy()
@@ -80,7 +81,7 @@ namespace JumbotronGame.AndroidApp.Views.Activities
             base.OnDestroy();
         }
 
-        private async void UpdateArenaEvent()
+        private async Task UpdateArenaEventAsync()
         {
             await ViewModel.SynchronizeAsync();
 

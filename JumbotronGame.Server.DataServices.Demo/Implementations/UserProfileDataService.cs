@@ -32,7 +32,7 @@ namespace JumbotronGame.Server.DataServices.Demo.Implementations
 
         public override async Task<UserProfile> GetItemAsync(int id, CancellationToken ct)
         {
-            return await Task.FromResult(_userProfile).ConfigureAwait(false); ;
+            return await Task.FromResult(_userProfile).ConfigureAwait(false);
         }
 
         public override async Task<IEnumerable<UserProfile>> GetItemsAsync(UserProfileCriteria criteria, CancellationToken ct)

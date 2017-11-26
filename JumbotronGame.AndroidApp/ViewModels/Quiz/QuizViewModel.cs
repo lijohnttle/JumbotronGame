@@ -4,6 +4,7 @@ using JumbotronGame.Server.DataContracts.Game;
 using System;
 using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace JumbotronGame.AndroidApp.ViewModels.Quiz
 {
@@ -92,7 +93,7 @@ namespace JumbotronGame.AndroidApp.ViewModels.Quiz
 
         #region Methods
 
-        public async void SaveAnswerSet()
+        public async Task SaveAnswerSetAsync()
         {
             var questions = Questions;
             if (questions != null)

@@ -7,15 +7,6 @@ namespace JumbotronGame.Server.DataServices.Demo.Implementations
 {
     public class QuizAnswerSetDataService : DataServiceBase<QuizAnswerSet, QuizAnswerSetCriteria>
     {
-        #region .ctor
-
-        public QuizAnswerSetDataService()
-        {
-            
-        }
-
-        #endregion .ctor
-
         #region Methods
 
         public override async Task<QuizAnswerSet> GetItemAsync(int id, CancellationToken ct)

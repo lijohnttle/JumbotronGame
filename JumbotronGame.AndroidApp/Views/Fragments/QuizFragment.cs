@@ -73,17 +73,16 @@ namespace JumbotronGame.AndroidApp.Views.Fragments
             return view;
         }
 
-        private void SetAnswer(QuizAnswerNumber answer)
+        private async void SetAnswer(QuizAnswerNumber answer)
         {
             var question = ViewModel?.CurrentQuestion;
             if (question != null)
             {
-                var isComplete = ViewModel.CurrentQuestionIndex == ViewModel.Questions.Length - 1;
-
                 question.CurrentAnswer = answer;
 
-                ViewModel.SaveAnswerSet();
                 ViewModel.CurrentQuestionIndex += 1;
+
+                await ViewModel.SaveAnswerSetAsync().ConfigureAwait(false);
             }
         }
 

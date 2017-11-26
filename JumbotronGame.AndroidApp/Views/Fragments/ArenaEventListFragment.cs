@@ -73,30 +73,32 @@ namespace JumbotronGame.AndroidApp.Views.Fragments
 
         private View GetArenaEventTemplate(int position, ArenaEventListItemViewModel itemViewModel, View convertView)
         {
+            var result = convertView;
+
             // CleanUp & Initialize
-            if (convertView != null)
+            if (result != null)
             {
-                if (_itemBindings.TryGetValue(convertView, out var existBindings))
+                if (_itemBindings.TryGetValue(result, out var existBindings))
                 {
                     foreach (var b in existBindings)
                     {
                         b.Detach();
                     }
 
-                    _itemBindings.Remove(convertView);
+                    _itemBindings.Remove(result);
                 }
             }
             else
             {
-                convertView = Activity.LayoutInflater.Inflate(Resource.Layout.ArenaEventListItemTemplate, null);
+                result = Activity.LayoutInflater.Inflate(Resource.Layout.ArenaEventListItemTemplate, null);
             }
 
             var itemBindings = new List<Binding>();
-            _itemBindings.Add(convertView, itemBindings);
+            _itemBindings.Add(result, itemBindings);
             
             // Header
-            var headerElement = convertView.FindViewById<TextView>(Resource.Id.HeaderTextView);
-            var dateElement = convertView.FindViewById<TextView>(Resource.Id.DateTextView);
+            var headerElement = result.FindViewById<TextView>(Resource.Id.HeaderTextView);
+            var dateElement = result.FindViewById<TextView>(Resource.Id.DateTextView);
 
             itemBindings.Add(new Binding<string, string>(itemViewModel, () => itemViewModel.Header, headerElement, () => headerElement.Text, BindingMode.OneWay));
             itemBindings.Add(new Binding<DateTime, string>(itemViewModel, () => itemViewModel.Date, dateElement, () => headerElement.Text, BindingMode.OneWay)
@@ -105,7 +107,7 @@ namespace JumbotronGame.AndroidApp.Views.Fragments
             // Preview Image
             if (itemViewModel.Id == 0 || itemViewModel.Id == 1)
             {
-                var previewImage = convertView.FindViewById<ImageView>(Resource.Id.PreviewImage);
+                var previewImage = result.FindViewById<ImageView>(Resource.Id.PreviewImage);
 
                 if (itemViewModel.Id == 0)
                 {
@@ -117,7 +119,7 @@ namespace JumbotronGame.AndroidApp.Views.Fragments
                 }
             }
 
-            return convertView;
+            return result;
         }
 
         #endregion Methods
