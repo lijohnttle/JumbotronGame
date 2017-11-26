@@ -1,5 +1,6 @@
 ﻿using JumbotronGame.Server.DataContracts.Arena;
 using JumbotronGame.Server.DataContracts.Game;
+using JumbotronGame.Server.DataContracts.Users;
 using JumbotronGame.Server.DataServices.Demo.Implementations;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -12,6 +13,7 @@ namespace JumbotronGame.Server.DataServices.Demo.Infrastructure
             serviceCollection.AddSingleton<IDataService<ArenaEvent, ArenaEventCriteria>, ArenaEventDataService>();
             serviceCollection.AddSingleton<IDataService<Quiz, QuizCriteria>, QuizDataService>();
             serviceCollection.AddSingleton<IDataService<QuizAnswerSet, QuizAnswerSetCriteria>, QuizAnswerSetDataService>();
+            serviceCollection.AddSingleton<IDataService<UserProfile, UserProfileCriteria>, UserProfileDataService>();
         }
     }
 }

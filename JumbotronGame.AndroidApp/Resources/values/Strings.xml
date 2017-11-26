@@ -3,4 +3,7 @@
   <string name="app_name">JumbotronGame</string>
   <string name="arena_events_header">ARENA EVENTS</string>
   <string name="quiz_completed">Completed!</string>
+  <string name="userprofile">User profile</string>
+  <string name="userprofile_FullName">FULL NAME</string>
+  <string name="userprofile_Points">POINTS</string>
 </resources>

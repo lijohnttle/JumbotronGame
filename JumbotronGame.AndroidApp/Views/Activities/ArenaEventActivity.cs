@@ -75,6 +75,8 @@ namespace JumbotronGame.AndroidApp.Views.Activities
                 quiz.QuizCompleted -= OnQuizCompleted;
             }
 
+            ViewModel.Dispose();
+
             base.OnDestroy();
         }
 

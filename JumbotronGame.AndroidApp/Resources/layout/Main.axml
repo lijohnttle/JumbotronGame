@@ -3,10 +3,18 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="match_parent">
+    <Toolbar
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?android:attr/actionBarSize"
+        android:background="?android:attr/colorPrimary"
+        android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar" />
     <LinearLayout
         android:background="@android:color/black"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
         <TextView
             android:text="@string/arena_events_header"
             android:textSize="12dp"

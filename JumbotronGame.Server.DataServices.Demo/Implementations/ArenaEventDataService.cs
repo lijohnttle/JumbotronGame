@@ -13,7 +13,7 @@ namespace JumbotronGame.Server.DataServices.Demo.Implementations
     {
         #region Fields
 
-        private ConcurrentDictionary<int, ArenaEvent> _storage = new ConcurrentDictionary<int, ArenaEvent>();
+        private readonly ConcurrentDictionary<int, ArenaEvent> _storage = new ConcurrentDictionary<int, ArenaEvent>();
         private readonly IDataService<Quiz, QuizCriteria> _quizDataService;
 
         #endregion Fields

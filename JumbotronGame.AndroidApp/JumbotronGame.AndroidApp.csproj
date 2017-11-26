@@ -75,6 +75,8 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ViewModels\Users\UserProfileViewModel.cs" />
+    <Compile Include="Views\ActionBarHelper.cs" />
     <Compile Include="Views\Activities\ArenaEventActivity.cs" />
     <Compile Include="App.cs" />
     <Compile Include="Infrastructure\Logging\DemoLogger.cs" />
@@ -101,6 +103,7 @@
     <Compile Include="ViewModels\Quiz\QuizQuestionViewModel.cs" />
     <Compile Include="ViewModels\Quiz\QuizViewModel.cs" />
     <Compile Include="ViewModels\ViewModelLocator.cs" />
+    <Compile Include="Views\Activities\UserProfileActivity.cs" />
     <Compile Include="Views\Fragments\ArenaEventListFragment.cs" />
     <Compile Include="Views\Fragments\QuizCompletedFragment.cs" />
     <Compile Include="Views\Fragments\QuizFragment.cs" />
@@ -115,6 +118,7 @@
     <AndroidResource Include="Resources\layout\QuizFragment.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\UserProfileTemplate.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -164,6 +168,14 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\QuizBeginFragment.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\menu\options_menu.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\styles.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

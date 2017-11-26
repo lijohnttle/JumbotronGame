@@ -6,15 +6,17 @@ using JumbotronGame.AndroidApp.ViewModels;
 using JumbotronGame.AndroidApp.ViewModels.ArenaEvents;
 using JumbotronGame.AndroidApp.ViewModels.Common;
 using JumbotronGame.AndroidApp.ViewModels.Main;
+using JumbotronGame.AndroidApp.ViewModels.Users;
 using JumbotronGame.Common.Logging;
 using JumbotronGame.Server.DataContracts.Arena;
 using JumbotronGame.Server.DataContracts.Game;
+using JumbotronGame.Server.DataContracts.Users;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
 namespace JumbotronGame.AndroidApp
 {
-    [Application(Theme = "@android:style/Theme.Material.Light.NoActionBar")]
+    [Application(Theme = "@style/MyCustomTheme")]
     public class App : Application
     {
         #region Fields
@@ -55,7 +57,7 @@ namespace JumbotronGame.AndroidApp
             base.OnCreate();
         }
 
-        private static void ConfigureServices(IServiceCollection serviceCollection)
+        private void ConfigureServices(IServiceCollection serviceCollection)
         {
             serviceCollection.AddTransient<ILogger, DemoLogger>();
 
@@ -66,6 +68,7 @@ namespace JumbotronGame.AndroidApp
             serviceCollection.AddSingleton<IRepository<ArenaEvent, ArenaEventCriteria>, Repository<ArenaEvent, ArenaEventCriteria>>();
             serviceCollection.AddSingleton<IRepository<Quiz, QuizCriteria>, Repository<Quiz, QuizCriteria>>();
             serviceCollection.AddSingleton<IRepository<QuizAnswerSet, QuizAnswerSetCriteria>, Repository<QuizAnswerSet, QuizAnswerSetCriteria>>();
+            serviceCollection.AddSingleton<IRepository<UserProfile, UserProfileCriteria>, Repository<UserProfile, UserProfileCriteria>>();
 
             #endregion Repositories
 
@@ -73,7 +76,9 @@ namespace JumbotronGame.AndroidApp
 
             serviceCollection.AddSingleton<IArenaEventListViewModel, ArenaEventListViewModel>();
             serviceCollection.AddTransient<ArenaEventViewModel>();
+            serviceCollection.AddTransient<UserProfileViewModel>();
             serviceCollection.AddSingleton<IItemFactory<ArenaEventViewModel>, ItemFactory<ArenaEventViewModel>>();
+            serviceCollection.AddSingleton<IItemFactory<UserProfileViewModel>, ItemFactory<UserProfileViewModel>>();
 
             serviceCollection.AddSingleton<IMainViewModel, MainViewModel>();
 

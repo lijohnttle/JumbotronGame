@@ -11,7 +11,7 @@ namespace JumbotronGame.Server.DataServices.Demo.Implementations
     {
         #region Fields
 
-        private ConcurrentDictionary<int, Quiz> _storage = new ConcurrentDictionary<int, Quiz>();
+        private readonly ConcurrentDictionary<int, Quiz> _storage = new ConcurrentDictionary<int, Quiz>();
 
         #endregion Fields
 

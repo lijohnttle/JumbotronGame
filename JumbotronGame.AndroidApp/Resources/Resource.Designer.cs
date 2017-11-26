@@ -66,41 +66,56 @@ namespace JumbotronGame.AndroidApp
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050005
-			public const int ArenaEventsListContainer = 2131034117;
+			// aapt resource value: 0x7f070006
+			public const int ArenaEventsListContainer = 2131165190;
 			
-			// aapt resource value: 0x7f050002
-			public const int DateTextView = 2131034114;
+			// aapt resource value: 0x7f070002
+			public const int DateTextView = 2131165186;
 			
-			// aapt resource value: 0x7f050001
-			public const int HeaderTextView = 2131034113;
+			// aapt resource value: 0x7f070001
+			public const int HeaderTextView = 2131165185;
 			
-			// aapt resource value: 0x7f050004
-			public const int LoadingProgress = 2131034116;
+			// aapt resource value: 0x7f070004
+			public const int LoadingProgress = 2131165188;
 			
-			// aapt resource value: 0x7f050000
-			public const int PreviewImage = 2131034112;
+			// aapt resource value: 0x7f070000
+			public const int PreviewImage = 2131165184;
 			
-			// aapt resource value: 0x7f050008
-			public const int QuizAnswerA = 2131034120;
+			// aapt resource value: 0x7f070009
+			public const int QuizAnswerA = 2131165193;
 			
-			// aapt resource value: 0x7f050009
-			public const int QuizAnswerB = 2131034121;
+			// aapt resource value: 0x7f07000a
+			public const int QuizAnswerB = 2131165194;
 			
-			// aapt resource value: 0x7f05000a
-			public const int QuizAnswerC = 2131034122;
+			// aapt resource value: 0x7f07000b
+			public const int QuizAnswerC = 2131165195;
 			
-			// aapt resource value: 0x7f05000b
-			public const int QuizAnswerD = 2131034123;
+			// aapt resource value: 0x7f07000c
+			public const int QuizAnswerD = 2131165196;
 			
-			// aapt resource value: 0x7f050003
-			public const int QuizContainer = 2131034115;
+			// aapt resource value: 0x7f070003
+			public const int QuizContainer = 2131165187;
 			
-			// aapt resource value: 0x7f050006
-			public const int QuizQuestion = 2131034118;
+			// aapt resource value: 0x7f070007
+			public const int QuizQuestion = 2131165191;
 			
-			// aapt resource value: 0x7f050007
-			public const int space1 = 2131034119;
+			// aapt resource value: 0x7f07000d
+			public const int UserProfile_Container = 2131165197;
+			
+			// aapt resource value: 0x7f07000e
+			public const int UserProfile_fullName = 2131165198;
+			
+			// aapt resource value: 0x7f07000f
+			public const int UserProfile_points = 2131165199;
+			
+			// aapt resource value: 0x7f070005
+			public const int actionBar = 2131165189;
+			
+			// aapt resource value: 0x7f070010
+			public const int action_userprofile = 2131165200;
+			
+			// aapt resource value: 0x7f070008
+			public const int space1 = 2131165192;
 			
 			static Id()
 			{
@@ -133,12 +148,31 @@ namespace JumbotronGame.AndroidApp
 			// aapt resource value: 0x7f030005
 			public const int QuizFragment = 2130903045;
 			
+			// aapt resource value: 0x7f030006
+			public const int UserProfileTemplate = 2130903046;
+			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 			}
 			
 			private Layout()
+			{
+			}
+		}
+		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f060000
+			public const int options_menu = 2131099648;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
 			{
 			}
 		}
@@ -155,12 +189,37 @@ namespace JumbotronGame.AndroidApp
 			// aapt resource value: 0x7f040002
 			public const int quiz_completed = 2130968578;
 			
+			// aapt resource value: 0x7f040003
+			public const int userprofile = 2130968579;
+			
+			// aapt resource value: 0x7f040004
+			public const int userprofile_FullName = 2130968580;
+			
+			// aapt resource value: 0x7f040005
+			public const int userprofile_Points = 2130968581;
+			
 			static String()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 			}
 			
 			private String()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7f050000
+			public const int MyCustomTheme = 2131034112;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
 			{
 			}
 		}

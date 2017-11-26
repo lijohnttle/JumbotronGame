@@ -1,4 +1,5 @@
 ﻿using Android.App;
+using Android.Content;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
@@ -39,6 +40,8 @@ namespace JumbotronGame.AndroidApp.Views.Activities
             
             SetContentView(Resource.Layout.Main);
 
+            ActionBarHelper.SetupActionBar(this);
+
             ArenaEventsListContainerElement = FindViewById<GridLayout>(Resource.Id.ArenaEventsListContainer);
             ArenaEventsSyncElement = FindViewById<ProgressBar>(Resource.Id.LoadingProgress);
 
@@ -58,6 +61,16 @@ namespace JumbotronGame.AndroidApp.Views.Activities
             fragmentTransaction.Commit();
 
             ViewModel.ArenaEvents.Synchronize();
+        }
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.options_menu, menu);
+
+            var userProfileItem = menu.FindItem(Resource.Id.action_userprofile);
+            userProfileItem.SetIntent(new Intent(this, typeof(UserProfileActivity)));
+
+            return true;
         }
 
         private View GetArenaEventTemplate(int position, ArenaEventListItemViewModel itemViewModel, View convertView)
